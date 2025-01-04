@@ -13,3 +13,14 @@ def view_inventory():
             print(f"{i}, Name :{product['name']}, Quantity: {product['quantity']}, Price : {product['price']}")
 
 
+def update_product(index, name=None, quantity=None, price=None):
+    try:
+        if name:
+            inventory[index-1]['name'] = name
+        if quantity:
+            inventory[index-1]['quantity'] = quantity
+        if price:
+            inventory[index-1][quantity] = price
+        print(f"Product at index{index} updated!")
+    except IndexError:
+        print(f"{index} is not a valid index input")
