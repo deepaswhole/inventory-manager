@@ -57,7 +57,7 @@ def load_inventory():
         with open("inventory.json", 'r') as file:
             inventory = json.load(file)
         print("inventory loaded from file!")
-        print('branch1')
+        print('branch2')
     except FileNotFoundError:
         print("No saved inventory found!")
 
