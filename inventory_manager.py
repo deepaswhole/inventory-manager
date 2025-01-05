@@ -24,3 +24,12 @@ def update_product(index, name=None, quantity=None, price=None):
         print(f"Product at index{index} updated!")
     except IndexError:
         print(f"{index} is not a valid index input")
+
+
+def delete_product(index):
+    try:
+        removed_item = inventory.pop(index-1)
+        print(f"{removed_item['name']} is removed from inventory")
+    except IndexError:
+        print(f"{index} is not a valid index input!")
+
